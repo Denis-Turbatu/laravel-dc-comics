@@ -7,7 +7,18 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * CREATE TABLE `comics`(
+     *  id int PRIMARY KEY AUTO_INCREMENT,
+     *  title varchar(255) NOT NULL,
+     *  description varchar(255) NOT NULL,
+     *  thumb varchar(255) NOT NULL,
+     *  price varchar(255) NOT NULL,
+     *  series varchar(255) NOT NULL,
+     *  sale_date date() NOT NULL,
+     *  type varchar(255) NOT NULL,
+     *  created_in timestamps() NOT NULL,
+     *  updated_in timestamps() NOT NULL,
+     * );
      */
     public function up(): void
     {
