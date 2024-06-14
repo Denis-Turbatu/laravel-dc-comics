@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Comic;
 
 class DcComicTableSeeder extends Seeder
 {
@@ -15,6 +16,12 @@ class DcComicTableSeeder extends Seeder
         // creo variabile data e passo dalla folder '/config/' il file comics.php
         $data = config('comics');
         // degub
-        dd($data);
+        // dd($data);
+        foreach ($data as $comic) {
+            $newComic = new Comic;
+            $newComic->fill($comic);
+            // dd($newComic);
+            $newComic->save();
+        }
     }
 }

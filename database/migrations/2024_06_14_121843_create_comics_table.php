@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('dc_comics', function (Blueprint $table) {
+        Schema::create('comics', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->string('thumb');
             $table->string('price');
             $table->string('series');
-            $table->string('sale_date');
+            $table->date('sale_date');
             $table->string('type');
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('dc_comics');
+        Schema::dropIfExists('comics');
     }
 };
