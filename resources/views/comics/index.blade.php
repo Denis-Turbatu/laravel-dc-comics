@@ -39,10 +39,20 @@
                                 {{ $comic['price'] }}
                             </span>
                         </p>
-                        <div>
-                            <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="text-decoration-none text-white bg-primary p-2 rounded-2">Modifica</a>
-                            <a href="" class="
-                            text-decoration-none text-white bg-danger p-2 rounded-2">Elimina</a>
+                        <div class="d-flex gap-2">
+                            <a 
+                                href="{{ route('comics.edit', ['comic' => $comic->id]) }}" 
+                                class="text-decoration-none text-white bg-primary p-2 rounded-2"
+                            >Modifica</a>
+
+                            <form action="{{route('comics.destroy', ['comic' => $comic->id])}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="bg-danger text-white border-0 p-2 rounded-2">Cancella</button>
+                            </form>
+                            {{-- <a href="" class="
+                            text-decoration-none text-white bg-danger p-2 rounded-2">
+                            Elimina</a> --}}
                         </div>
                     </div>
                 </div>
