@@ -8,5 +8,5 @@
 <p>{{$comic->sale_date}}</p>
 <p>{{$comic->type}}</p>
 <p>{{$comic->description}}</p>
-<a href="{{route('comics.index')}}">Torna alla pagina Iniziale</a>
+<a href="{{route('comics.index')}}" class="text-decoration-none text-white bg-danger p-2 rounded-2">Torna alla pagina Iniziale</a>
 @endsection

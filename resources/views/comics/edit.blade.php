@@ -45,7 +45,10 @@
                 <textarea class="form-control" id="description" name="description" rows="6">{{$comic->description}}"</textarea>
             </div>
 
-            <button class="btn btn-success" type="submit">Salva</button>
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-success" type="submit">Salva</button>
+                <a href="{{route('comics.index')}}" class="text-decoration-none text-white bg-danger p-2 rounded-2">Torna alla pagina Iniziale</a>
+            </div>
         </form>
     </div>
 @endsection
