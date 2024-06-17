@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Lista Comics</h1>
+    
     <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1>Lista Comics</h1>
+            <a href="{{route("comics.create")}}" class="px-4 py-2 bg-success text-decoration-none text-white rounded-2">Crea</a>
+        </div>
         <div class="row">
             @foreach ($listaComics as $comic)
                 <div class="card border border-0 m-4" style="width: 17rem;">
@@ -32,6 +36,10 @@
                                 {{ $comic['price'] }}
                             </span>
                         </p>
+                        <div>
+                            <a href="">Modifica</a>
+                            <a href="">Elimina</a>
+                        </div>
                     </div>
                 </div>
             @endforeach

@@ -18,4 +18,8 @@ Route::get('/', function () {
     return view('home');
 });
 
+//index.blade.php
 Route::resource('comics', ComicController::class);
+
+//create.blade.php
+Route::resource('create', ComicController::class);
