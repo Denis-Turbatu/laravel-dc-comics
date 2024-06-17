@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+@php
+    $defaultImage = 'https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg';
+@endphp
     
     <div class="container">
         <div class="d-flex justify-content-between align-items-center">
@@ -10,7 +13,7 @@
         <div class="row">
             @foreach ($listaComics as $comic)
                 <div class="card border border-0 m-4" style="width: 17rem;">
-                    <img src="{{ asset($comic['thumb']) }}" class="card-img-top" alt="...">
+                    <img src="{{ isset($comic['thumb']) ? asset($comic['thumb']) : $defaultImage }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">
                             Titolo:

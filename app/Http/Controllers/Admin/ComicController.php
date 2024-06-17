@@ -32,13 +32,12 @@ class ComicController extends Controller
     {
         // ottengo i data dalla request
         $data = $request->all();
-
+        
         // creo una nuova istanza
         $comic = new Comic();
 
         // uso fill() per poter inserire i dati contenuti in $data
         $comic->fill($data);
-
         
         // salvo i data nel DB
         $comic->save();
