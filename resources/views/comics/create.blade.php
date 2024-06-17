@@ -4,7 +4,7 @@
     <div class="container">
         <h1 class="my-5">Aggiungi un comics!</h1>
 
-        <form action="" method="POST">
+        <form action="{{route("comics.store")}}" method="POST">
             {{-- Cookie per far riconoscere il form al server --}}
             @csrf
 
@@ -19,23 +19,23 @@
             </div>
 
             <div class="mb-3">
-                <label for="cooking_time" class="form-label fw-semibold">Serie</label>
-                <input type="text" class="form-control" id="cooking_time" name="cooking_time">
+                <label for="series" class="form-label fw-semibold">Serie</label>
+                <input type="text" class="form-control" id="series" name="series">
             </div>
 
             <div class="mb-3">
-                <label for="weight" class="form-label fw-semibold">Data di pubblicazione</label>
-                <input type="text" class="form-control" id="weight" name="weight">
+                <label for="sale_date" class="form-label fw-semibold">Data di pubblicazione</label>
+                <input type="datetime" class="form-control" id="sale_date" name="sale_date">
             </div>
 
             <div class="mb-3">
-                <label for="cooking_time" class="form-label fw-semibold">Tipo</label>
-                <input type="text" class="form-control" id="cooking_time" name="cooking_time">
+                <label for="type" class="form-label fw-semibold">Tipo</label>
+                <input type="text" class="form-control" id="type" name="type">
             </div>
 
             <div class="mb-3">
-                <label for="cooking_time" class="form-label fw-semibold">Prezzo</label>
-                <input type="text" class="form-control" id="cooking_time" name="cooking_time">
+                <label for="price" class="form-label fw-semibold">Prezzo</label>
+                <input type="text" class="form-control" id="price" name="price">
             </div>
 
             <div class="mb-3">
