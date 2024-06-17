@@ -49,9 +49,9 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Comic $comic)
     {
-        //
+        return view('comics.show', compact('comic'));
     }
 
     /**
@@ -65,9 +65,11 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $data = $request->all();
+        $comic->update($data);
+        return redirect()->route('comics.show', ['comic' => $comic->id]);
     }
 
     /**
