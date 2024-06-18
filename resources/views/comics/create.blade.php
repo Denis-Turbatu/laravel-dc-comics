@@ -20,7 +20,7 @@
 
             <div class="mb-3">
                 <label for="title" class="form-label fw-semibold">Titolo</label>
-                <input type="text" class="form-control" id="title" name="title">
+                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title">
             </div>
 
             <div class="mb-3">
@@ -30,27 +30,27 @@
 
             <div class="mb-3">
                 <label for="series" class="form-label fw-semibold">Serie</label>
-                <input type="text" class="form-control" id="series" name="series">
+                <input type="text" class="form-control @error('title') is-invalid @enderror" id="series" name="series">
             </div>
 
             <div class="mb-3">
                 <label for="sale_date" class="form-label fw-semibold">Data di pubblicazione</label>
-                <input type="date" class="form-control" id="sale_date" name="sale_date">
+                <input type="date" class="form-control @error('title') is-invalid @enderror" id="sale_date" name="sale_date">
             </div>
 
             <div class="mb-3">
                 <label for="type" class="form-label fw-semibold">Tipo</label>
-                <input type="text" class="form-control" id="type" name="type">
+                <input type="text" class="form-control @error('title') is-invalid @enderror" id="type" name="type">
             </div>
 
             <div class="mb-3">
                 <label for="price" class="form-label fw-semibold">Prezzo</label>
-                <input type="text" class="form-control" id="price" name="price">
+                <input type="text" class="form-control @error('title') is-invalid @enderror" id="price" name="price">
             </div>
 
             <div class="mb-3">
                 <label for="description" class="form-label fw-semibold">Descrizione</label>
-                <textarea class="form-control" id="description" name="description" rows="6"></textarea>
+                <textarea class="form-control" name="description" rows="6"></textarea>
             </div>
 
             <button class="btn btn-success" type="submit">Salva</button>
