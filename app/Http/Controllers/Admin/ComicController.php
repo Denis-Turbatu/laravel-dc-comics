@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreComicRequest;
 use Illuminate\Http\Request;
 use App\Models\Comic;
 
@@ -28,26 +29,26 @@ class ComicController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
-        $validated = $request->validate([
-            'title' => ['required', 'min:10'],
-            'price' => ['required'],
-            'series' => ['required', 'min:5'],
-            'sale_date' => ['required'],
-            'type' => ['required', 'min:5'],
-        ], [
-            // titolo
-            'title.required' => 'Il titolo deve essere inserito',
-            // prezzo
-            'price.required' => 'Il prezzo deve essere inserito',
-            // serie
-            'series.required' => 'La serie deve essere inserita',
-            // data pub.
-            'sale_date.required' => 'La data di pubblicazione  deve essere inserita',
-            // tipo
-            'type.required' => 'Il tipo deve essere inserito',
-        ]);
+        // $validated = $request->validate([
+        //     'title' => ['required', 'min:10'],
+        //     'price' => ['required'],
+        //     'series' => ['required', 'min:5'],
+        //     'sale_date' => ['required'],
+        //     'type' => ['required', 'min:5'],
+        // ], [
+        //     // titolo
+        //     'title.required' => 'Il titolo deve essere inserito',
+        //     // prezzo
+        //     'price.required' => 'Il prezzo deve essere inserito',
+        //     // serie
+        //     'series.required' => 'La serie deve essere inserita',
+        //     // data pub.
+        //     'sale_date.required' => 'La data di pubblicazione  deve essere inserita',
+        //     // tipo
+        //     'type.required' => 'Il tipo deve essere inserito',
+        // ]);
 
         // ottengo i data dalla request
         $data = $request->all();
