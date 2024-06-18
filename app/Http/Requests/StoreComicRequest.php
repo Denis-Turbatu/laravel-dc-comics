@@ -35,14 +35,17 @@ class StoreComicRequest extends FormRequest
         return [
             // titolo
             'title.required' => 'Il titolo deve essere inserito',
+            'title.min' => 'Il titolo deve contenere almeno 10 caratteri',
             // prezzo
             'price.required' => 'Il prezzo deve essere inserito',
             // serie
             'series.required' => 'La serie deve essere inserita',
+            'series.min' => 'La serie deve contenere almeno 5 caratteri',
             // data pub.
             'sale_date.required' => 'La data di pubblicazione  deve essere inserita',
             // tipo
             'type.required' => 'Il tipo deve essere inserito',
+            'type.min' => 'Il tipo deve contenere almeno 5 caratteri',
         ];
     }
 }

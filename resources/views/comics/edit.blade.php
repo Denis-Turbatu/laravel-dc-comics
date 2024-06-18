@@ -4,6 +4,16 @@
     <div class="container">
         <h1 class="my-5">Aggiungi un comics!</h1>
 
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form action="{{route('comics.update', ['comic' => $comic->id])}}" method="POST">
             {{-- Cookie per far riconoscere il form al server --}}
             @csrf
