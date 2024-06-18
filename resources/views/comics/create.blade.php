@@ -30,22 +30,22 @@
 
             <div class="mb-3">
                 <label for="series" class="form-label fw-semibold">Serie</label>
-                <input type="text" class="form-control @error('title') is-invalid @enderror" id="series" name="series">
+                <input type="text" class="form-control @error('series') is-invalid @enderror" id="series" name="series">
             </div>
 
             <div class="mb-3">
                 <label for="sale_date" class="form-label fw-semibold">Data di pubblicazione</label>
-                <input type="date" class="form-control @error('title') is-invalid @enderror" id="sale_date" name="sale_date">
+                <input type="date" class="form-control @error('sale_date') is-invalid @enderror" id="sale_date" name="sale_date">
             </div>
 
             <div class="mb-3">
                 <label for="type" class="form-label fw-semibold">Tipo</label>
-                <input type="text" class="form-control @error('title') is-invalid @enderror" id="type" name="type">
+                <input type="text" class="form-control @error('type') is-invalid @enderror" id="type" name="type">
             </div>
 
             <div class="mb-3">
                 <label for="price" class="form-label fw-semibold">Prezzo</label>
-                <input type="text" class="form-control @error('title') is-invalid @enderror" id="price" name="price">
+                <input type="text" class="form-control @error('price') is-invalid @enderror" id="price" name="price">
             </div>
 
             <div class="mb-3">
